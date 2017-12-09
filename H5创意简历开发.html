@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.min.css">
+    <!--动态适配页面的样式-->
+    <script>
+        (function () {
+            let computed=function () {
+                //dexW:设计稿的宽度
+                //winW:设备的宽度
+                let desW=640,
+                    winW=document.documentElement.clientWidth;//移动端文档模式都是H5所以不需要用document.body
+                if(winW>=640){
+                    document.documentElement.style.fontSize='100px';
+                    return;
+                }
+                document.documentElement.style.fontSize=winW/desW*100+'px'
+            };
+            computed();
+            window.addEventListener('resizeresize',computed,false);
+        })();
+    </script>
+</head>
+<body>
+    <main class="mainBox">
+        <!--加载资源区域-->
+        <section class="loadingBox">
+            <div class="title">
+                <h1>珠峰培训</h1>
+                <h2>H5场景的交互型简历</h2>
+            </div>
+            <div class="progress">
+                <div class="run"></div>
+            </div>
+        </section>
+        <!--phone区域-->
+        <section class="phoneBox">
+            <div class="header">
+                <img class="logo" src="img/zf_phoneLogo.png" alt="珠峰培训">
+                <span class="time">00:00</span>
+            </div>
+            <div class="listen">
+                <div class="move"></div>
+                <a href="javascript:;" class="touch"></a>
+            </div>
+            <div class="detail">
+                <a href="javascript:;" class="touch"></a>
+            </div>
+            <!--audio-->
+            <audio src="audio/bell.mp3" loop preload="none" id="bell"></audio>
+            <audio src="audio/say.mp3" preload="none" id="say"></audio>
+        </section>
+        <!---->
+        <section class="messageBox">
+            <ul class="talkBox clear">
+                <li class="student">
+                    <img src="img/zf_messageStudent.png" alt="" >
+                    <i></i>
+                    哎，毕业了
+                </li>
+                <li class="teacher">
+                    <img src="img/zf_messageLogo.png" alt="" >
+                    <i></i>
+                    怎么会？
+                </li>
+                <li class="teacher">
+                    <img src="img/zf_messageLogo.png" alt="" >
+                    <i></i>
+                    我们毕业实习的最低工资都是12K以上呢
+                </li>
+                <li class="student">
+                    <img src="img/zf_messageStudent.png" alt="" >
+                    <i></i>
+                    什么会导致我对前端丧失兴趣？
+                </li>
+                <li class="teacher">
+                    <img src="img/zf_messageLogo.png" alt="" >
+                    <i></i>
+                    只要你有兴趣，学前端很简单
+                </li>
+                <li class="student">
+                    <img src="img/zf_messageStudent.png" alt="" >
+                    <i></i>
+                    兴趣能在前端的路上支撑我多远？
+                </li>
+                <li class="teacher">
+                    <img src="img/zf_messageLogo.png" alt="" >
+                    <i></i>
+                    当你感觉学习枯燥的时候你可以听点音乐；
+                </li>
+                <li class="student">
+                    <img src="img/zf_messageStudent.png" alt="" >
+                    <i></i>
+                    我也喜欢听音乐啊
+                </li>
+                <li class="teacher">
+                    <img src="img/zf_messageLogo.png" alt="" >
+                    <i></i>
+                    那不就好了么
+                </li>
+            </ul>
+            <div class="keyBord">
+                <span>什么会导致我对前端丧失兴趣?</span>
+                <a href="javascript:;" class="submit"></a>
+            </div>
+            <audio src="audio/music.mp3" loop preload="none" id="music"></audio>
+        </section>
+        <!--魔方区域-->
+        <section class="cubeBox">
+            <ul class="box">
+                <li><img src="img/zf_cube1.png" alt=""></li>
+                <li><img src="img/zf_cube2.png" alt=""></li>
+                <li><img src="img/zf_cube3.png" alt=""></li>
+                <li><img src="img/zf_cube4.png" alt=""></li>
+                <li><img src="img/zf_cube5.png" alt=""></li>
+                <li><img src="img/zf_cube6.png" alt=""></li>
+            </ul>
+            <img src="img/zf_cubeTip.png" alt="" class="tip">
+        </section>
+        <section class="detailBox">
+            <!--返回按钮-->
+            <a href="javascript:;" class="return"></a>
+            <!--swiper-->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide page1">
+                        <dl id="makisuBox">
+                            <dt>自我介绍</dt>
+                            <dd>
+                                <em>01</em>
+                                <p>姓名：周啸天</p>
+                            </dd>
+                            <dd>
+                                <em>02</em>
+                                <p>姓别：男</p>
+                            </dd>
+                            <dd>
+                                <em>03</em>
+                                <p>年龄：27</p>
+                            </dd>
+                            <dd>
+                                <em>04</em>
+                                <p>户籍：河南</p>
+                            </dd>
+                            <dd>
+                                <em>05</em>
+                                <p>电话：15539588217</p>
+                            </dd>
+                            <dd>
+                                <em>06</em>
+                                <p>邮箱：307590317@qq.com</p>
+                            </dd>
+                            <dd>
+                                <em>07</em>
+                                <p>座右铭：合理的是锻炼，不合理的是磨练</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide page2">
+                        <h2>专业技能</h2>
+                        <img src="img/zf_course1.png" alt="">
+                        <img src="img/zf_course2.png" alt="">
+                        <img src="img/zf_course3.png" alt="">
+                        <img src="img/zf_course4.png" alt="">
+                        <img src="img/zf_course5.png" alt="">
+                        <img src="img/zf_course6.png" alt="">
+                        <img src="img/zf_course.png" alt="">
+                    </div>
+                    <div class="swiper-slide page3"></div>
+                    <div class="swiper-slide page4"></div>
+                    <div class="swiper-slide page5"></div>
+                    <div class="swiper-slide page6"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/makisu.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/index1.js"></script>
+</body>
+</html>

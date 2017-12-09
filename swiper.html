@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!--<script>-->
+        <!--(function () {-->
+            <!--let computed=function () {-->
+                <!--let winW=document.documentElement.clientWidth;-->
+                <!--if(winW>=640){-->
+                    <!--document.documentElement.style.fontSize='100px';-->
+                <!--}-->
+                <!--document.documentElement.style.fontSize=winW/640*100+'px';-->
+            <!--};-->
+            <!--computed();-->
+            <!--window.addEventListener('resize',computed,false);-->
+        <!--})()-->
+    <!--</script>-->
+    <style>
+        html{
+            font-size: 100px;
+        }
+        .swiper-container,.swiper-slide{
+            height:11.36rem;
+            text-align: center;
+            font-size: 40px;
+        }
+        .swiper-slide{
+            line-height: 100px;
+        }
+        .swiper-slide:nth-child(odd){
+            background: red;
+        }
+        .swiper-slide:nth-child(even){
+            background: blue;
+        }
+    </style>
+
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide page1">1111</div>
+        <div class="swiper-slide page2">2222</div>
+        <div class="swiper-slide page3">3333</div>
+        <div class="swiper-slide page4">4444</div>
+        <div class="swiper-slide page5">5555</div>
+        <div class="swiper-slide page6">6666</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <!--<div class="swiper-button-prev"></div>-->
+    <!--<div class="swiper-button-next"></div>-->
+    <!--<div class="swiper-scrollbar"></div>-->
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+    new Swiper('.swiper-container',{
+        direction: 'vertical',
+        pagination:'.swiper-pagination',
+        effect:'coverflow'
+    });
+    let winW=document.documentElement.clientHeight;
+    let $swiperContainer=$('.swiper-container'),
+        $swiperSlide=$('.swiper-slide');
+    $swiperContainer.css('height',winW);
+    $swiperSlide.css('height',winW);
+</script>
+</body>
+</html>
