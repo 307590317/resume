@@ -188,6 +188,10 @@ let messageRender=(function($){
         }
     }
 })(Zepto);
+//只要在移动端浏览器实现滑动操作，都需要把浏览器默认的滑动行为（如页卡切换）禁止掉；
+$(document).on('touchstart touchmove touchend',function (e) {
+    e.preventDefault();
+});
 let cubeRender=(function(){
     let $cubeBox=$('.cubeBox'),
         $box=$cubeBox.find('.box');
